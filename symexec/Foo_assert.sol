@@ -22,7 +22,7 @@ contract Foo {
         }
     }
 
-    function revertIfCracked() public view {
+    function revertIfCracked() external view {
         bool res = true;
         assembly {
             if and(sload(flagA.slot), sload(flagB.slot)) {
